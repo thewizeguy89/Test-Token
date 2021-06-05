@@ -4,13 +4,13 @@ import "./CVTToken.sol";
 
 contract CVTTokenSale {
     address admin;
-    DappToken public tokenContract;
+    CVTToken public tokenContract;
     uint256 public tokenPrice;
     uint256 public tokensSold;
 
     event Sell(address _buyer, uint256 _amount);
 
-    function CVTTokenSale(CVTToken _tokenContract, uint256 _tokenPrice) public {
+    function CVTTokenSaleMSG(CVTToken _tokenContract, uint256 _tokenPrice) public {
         admin = msg.sender;
         tokenContract = _tokenContract;
         tokenPrice = _tokenPrice;
@@ -27,12 +27,12 @@ contract CVTTokenSale {
 
         tokensSold += _numberOfTokens;
 
-        Sell(msg.sender, _numberOfTokens);
+        emit Sell(msg.sender, _numberOfTokens);
     }
 
     function endSale() public {
         require(msg.sender == admin);
         require(tokenContract.transfer(admin, tokenContract.balanceOf(this)));
-        admin.transfer(address(this).balance);
+        admin.transfer(address, payable(this).balance);
     }
 }
