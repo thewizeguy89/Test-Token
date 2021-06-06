@@ -30,10 +30,10 @@ contract CVTTokenSale {
         emit Sell(msg.sender, _numberOfTokens);
     }
             //Fix endSale to complete transaction
-            
-        // function endSale() public {
-        // require(msg.sender == admin);
-        // require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));
-        // admin.transfer(address payable(this).balance);
-        // }
+
+    function endSale() public {
+        require(msg.sender == admin);
+        require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));
+        admin.transfer(address payable(this).balance);
+    }
 }
