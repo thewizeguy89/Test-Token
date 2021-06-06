@@ -101,12 +101,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_buyer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"Sell\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"contract CVTToken\",\"name\":\"_tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenPrice\",\"type\":\"uint256\"}],\"name\":\"CVTTokenSaleMSG\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_numberOfTokens\",\"type\":\"uint256\"}],\"name\":\"buyTokens\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenContract\",\"outputs\":[{\"internalType\":\"contract CVTToken\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokensSold\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/tim/Documents/Git Projects/Test-Token/contracts/CVTTokenSale.sol\":\"CVTTokenSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/tim/Documents/Git Projects/Test-Token/contracts/CVTToken.sol\":{\"keccak256\":\"0x36e62ad2785dd5086b0469bf14398bbe03518daf851c34e6784e278d08965c21\",\"urls\":[\"bzz-raw://45da94c31b88d99544a0e8b4d48ee4ddffbf46de430e778fca89b0722ff96688\",\"dweb:/ipfs/QmS7NcR2B7ZFLbxSV59oxk3s5ZfBjQVQRcihjX2bqb2kbh\"]},\"/C/Users/tim/Documents/Git Projects/Test-Token/contracts/CVTTokenSale.sol\":{\"keccak256\":\"0x859f5bd1b3637e973f8750ed2c8d14da7b28a7b434f114a1fb73e228e27ac186\",\"urls\":[\"bzz-raw://a23f2042469c31546eaf4cf82e6729bc7ab314af3647710e821c6cab7c4bd734\",\"dweb:/ipfs/QmQPjKQPK3KYpVPa4sm2P4WGaNteMAv4ttCH7S95ZUmFAf\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5061050c806100206000396000f3fe60806040526004361061004a5760003560e01c80633610724e1461004f578063518ab2a81461007d57806355a373d6146100a85780635ee7b2a0146100ff5780637ff9b5961461015a575b600080fd5b61007b6004803603602081101561006557600080fd5b8101908080359060200190929190505050610185565b005b34801561008957600080fd5b506100926103ed565b6040518082815260200191505060405180910390f35b3480156100b457600080fd5b506100bd6103f3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010b57600080fd5b506101586004803603604081101561012257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610419565b005b34801561016657600080fd5b5061016f6104a5565b6040518082815260200191505060405180910390f35b610191816002546104ab565b341461019c57600080fd5b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561023c57600080fd5b505afa158015610250573d6000803e3d6000fd5b505050506040513d602081101561026657600080fd5b8101908080519060200190929190505050101561028257600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561032b57600080fd5b505af115801561033f573d6000803e3d6000fd5b505050506040513d602081101561035557600080fd5b810190808051906020019092919050505061036f57600080fd5b806003600082825401925050819055507f5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df093382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a150565b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806002819055505050565b60025481565b6000808214806104c857508282838502925082816104c557fe5b04145b6104d157600080fd5b9291505056fea265627a7a72315820de8b87dcc4057023ec69c676aa91594280d8dacf90a65d59e41841d5d172776764736f6c63430005100032",
-  "deployedBytecode": "0x60806040526004361061004a5760003560e01c80633610724e1461004f578063518ab2a81461007d57806355a373d6146100a85780635ee7b2a0146100ff5780637ff9b5961461015a575b600080fd5b61007b6004803603602081101561006557600080fd5b8101908080359060200190929190505050610185565b005b34801561008957600080fd5b506100926103ed565b6040518082815260200191505060405180910390f35b3480156100b457600080fd5b506100bd6103f3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010b57600080fd5b506101586004803603604081101561012257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610419565b005b34801561016657600080fd5b5061016f6104a5565b6040518082815260200191505060405180910390f35b610191816002546104ab565b341461019c57600080fd5b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561023c57600080fd5b505afa158015610250573d6000803e3d6000fd5b505050506040513d602081101561026657600080fd5b8101908080519060200190929190505050101561028257600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561032b57600080fd5b505af115801561033f573d6000803e3d6000fd5b505050506040513d602081101561035557600080fd5b810190808051906020019092919050505061036f57600080fd5b806003600082825401925050819055507f5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df093382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a150565b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806002819055505050565b60025481565b6000808214806104c857508282838502925082816104c557fe5b04145b6104d157600080fd5b9291505056fea265627a7a72315820de8b87dcc4057023ec69c676aa91594280d8dacf90a65d59e41841d5d172776764736f6c63430005100032",
-  "sourceMap": "55:1162:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;55:1162:1;;;;;;;",
-  "deployedSourceMap": "55:1162:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;596:378;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;596:378:1;;;;;;;;;;;;;;;;;:::i;:::-;;180:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;180:25:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;112:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;112:29:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;266:191;;8:9:-1;5:2;;;30:1;27;20:12;5:2;266:191:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;266:191:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;148:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;148:25:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;596:378;687:37;696:15;713:10;;687:8;:37::i;:::-;674:9;:50;666:59;;;;;;786:15;744:13;;;;;;;;;;;:23;;;776:4;744:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;744:38:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;744:38:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;744:38:1;;;;;;;;;;;;;;;;:57;;736:66;;;;;;821:13;;;;;;;;;;;:22;;;844:10;856:15;821:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;821:51:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;821:51:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;821:51:1;;;;;;;;;;;;;;;;813:60;;;;;;900:15;886:10;;:29;;;;;;;;;;;933:33;938:10;950:15;933:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;596:378;:::o;180:25::-;;;;:::o;112:29::-;;;;;;;;;;;;;:::o;266:191::-;363:10;355:5;;:18;;;;;;;;;;;;;;;;;;400:14;384:13;;:30;;;;;;;;;;;;;;;;;;438:11;425:10;:24;;;;266:191;;:::o;148:25::-;;;;:::o;465:123::-;522:6;554:1;549;:6;:30;;;;578:1;573;568;564;:5;560:9;;;559:15;;;;;;:20;549:30;541:39;;;;;;465:123;;;;:::o",
-  "source": "pragma solidity ^0.5.0;\r\n\r\nimport \"./CVTToken.sol\";\r\n\r\ncontract CVTTokenSale {\r\n    address payable admin;\r\n    CVTToken public tokenContract;\r\n    uint256 public tokenPrice;\r\n    uint256 public tokensSold;\r\n\r\n    event Sell(address _buyer, uint256 _amount);\r\n\r\n    function CVTTokenSaleMSG(CVTToken _tokenContract, uint256 _tokenPrice) public {\r\n        admin = msg.sender;\r\n        tokenContract = _tokenContract;\r\n        tokenPrice = _tokenPrice;\r\n    }\r\n\r\n    function multiply(uint x, uint y) internal pure returns (uint z) {\r\n        require(y == 0 || (z = x * y) / y == x);\r\n    }\r\n\r\n    function buyTokens(uint256 _numberOfTokens) public payable {\r\n        require(msg.value == multiply(_numberOfTokens, tokenPrice));\r\n        require(tokenContract.balanceOf(address(this)) >= _numberOfTokens);\r\n        require(tokenContract.transfer(msg.sender, _numberOfTokens));\r\n\r\n        tokensSold += _numberOfTokens;\r\n\r\n        emit Sell(msg.sender, _numberOfTokens);\r\n    }\r\n\r\n    // function endSale() public {\r\n       // require(msg.sender == admin);\r\n        // require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));\r\n        // admin.transfer(address payable(this).balance);\r\n    // }\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_buyer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"Sell\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"contract CVTToken\",\"name\":\"_tokenContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenPrice\",\"type\":\"uint256\"}],\"name\":\"CVTTokenSaleMSG\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_numberOfTokens\",\"type\":\"uint256\"}],\"name\":\"buyTokens\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenContract\",\"outputs\":[{\"internalType\":\"contract CVTToken\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokensSold\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/tim/Documents/Git Projects/Test-Token/contracts/CVTTokenSale.sol\":\"CVTTokenSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/tim/Documents/Git Projects/Test-Token/contracts/CVTToken.sol\":{\"keccak256\":\"0x36e62ad2785dd5086b0469bf14398bbe03518daf851c34e6784e278d08965c21\",\"urls\":[\"bzz-raw://45da94c31b88d99544a0e8b4d48ee4ddffbf46de430e778fca89b0722ff96688\",\"dweb:/ipfs/QmS7NcR2B7ZFLbxSV59oxk3s5ZfBjQVQRcihjX2bqb2kbh\"]},\"/C/Users/tim/Documents/Git Projects/Test-Token/contracts/CVTTokenSale.sol\":{\"keccak256\":\"0x6962ce2ab4bbfd19965b440030dad9eafbd9d12b517bd7540905c34a9168a153\",\"urls\":[\"bzz-raw://52df5e77c9d54a936168872fa1c7437f6669877bcac70f200941bb0757e6af51\",\"dweb:/ipfs/QmS1DVANkvEpYqvSMxwyeYPwy5JYn9YVFodgifLYgTJGnB\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061050c806100206000396000f3fe60806040526004361061004a5760003560e01c80633610724e1461004f578063518ab2a81461007d57806355a373d6146100a85780635ee7b2a0146100ff5780637ff9b5961461015a575b600080fd5b61007b6004803603602081101561006557600080fd5b8101908080359060200190929190505050610185565b005b34801561008957600080fd5b506100926103ed565b6040518082815260200191505060405180910390f35b3480156100b457600080fd5b506100bd6103f3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010b57600080fd5b506101586004803603604081101561012257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610419565b005b34801561016657600080fd5b5061016f6104a5565b6040518082815260200191505060405180910390f35b610191816002546104ab565b341461019c57600080fd5b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561023c57600080fd5b505afa158015610250573d6000803e3d6000fd5b505050506040513d602081101561026657600080fd5b8101908080519060200190929190505050101561028257600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561032b57600080fd5b505af115801561033f573d6000803e3d6000fd5b505050506040513d602081101561035557600080fd5b810190808051906020019092919050505061036f57600080fd5b806003600082825401925050819055507f5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df093382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a150565b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806002819055505050565b60025481565b6000808214806104c857508282838502925082816104c557fe5b04145b6104d157600080fd5b9291505056fea265627a7a723158209d6e0fe032369b6698090038df499e4b6217d6299a5636920ecb3d9d84b0edc164736f6c63430005100032",
+  "deployedBytecode": "0x60806040526004361061004a5760003560e01c80633610724e1461004f578063518ab2a81461007d57806355a373d6146100a85780635ee7b2a0146100ff5780637ff9b5961461015a575b600080fd5b61007b6004803603602081101561006557600080fd5b8101908080359060200190929190505050610185565b005b34801561008957600080fd5b506100926103ed565b6040518082815260200191505060405180910390f35b3480156100b457600080fd5b506100bd6103f3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010b57600080fd5b506101586004803603604081101561012257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610419565b005b34801561016657600080fd5b5061016f6104a5565b6040518082815260200191505060405180910390f35b610191816002546104ab565b341461019c57600080fd5b80600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561023c57600080fd5b505afa158015610250573d6000803e3d6000fd5b505050506040513d602081101561026657600080fd5b8101908080519060200190929190505050101561028257600080fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb33836040518363ffffffff1660e01b8152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561032b57600080fd5b505af115801561033f573d6000803e3d6000fd5b505050506040513d602081101561035557600080fd5b810190808051906020019092919050505061036f57600080fd5b806003600082825401925050819055507f5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df093382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a150565b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806002819055505050565b60025481565b6000808214806104c857508282838502925082816104c557fe5b04145b6104d157600080fd5b9291505056fea265627a7a723158209d6e0fe032369b6698090038df499e4b6217d6299a5636920ecb3d9d84b0edc164736f6c63430005100032",
+  "sourceMap": "55:1234:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;55:1234:1;;;;;;;",
+  "deployedSourceMap": "55:1234:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;596:378;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;596:378:1;;;;;;;;;;;;;;;;;:::i;:::-;;180:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;180:25:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;112:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;112:29:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;266:191;;8:9:-1;5:2;;;30:1;27;20:12;5:2;266:191:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;266:191:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;148:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;148:25:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;596:378;687:37;696:15;713:10;;687:8;:37::i;:::-;674:9;:50;666:59;;;;;;786:15;744:13;;;;;;;;;;;:23;;;776:4;744:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;744:38:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;744:38:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;744:38:1;;;;;;;;;;;;;;;;:57;;736:66;;;;;;821:13;;;;;;;;;;;:22;;;844:10;856:15;821:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;821:51:1;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;821:51:1;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;821:51:1;;;;;;;;;;;;;;;;813:60;;;;;;900:15;886:10;;:29;;;;;;;;;;;933:33;938:10;950:15;933:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;596:378;:::o;180:25::-;;;;:::o;112:29::-;;;;;;;;;;;;;:::o;266:191::-;363:10;355:5;;:18;;;;;;;;;;;;;;;;;;400:14;384:13;;:30;;;;;;;;;;;;;;;;;;438:11;425:10;:24;;;;266:191;;:::o;148:25::-;;;;:::o;465:123::-;522:6;554:1;549;:6;:30;;;;578:1;573;568;564;:5;560:9;;;559:15;;;;;;:20;549:30;541:39;;;;;;465:123;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\nimport \"./CVTToken.sol\";\r\n\r\ncontract CVTTokenSale {\r\n    address payable admin;\r\n    CVTToken public tokenContract;\r\n    uint256 public tokenPrice;\r\n    uint256 public tokensSold;\r\n\r\n    event Sell(address _buyer, uint256 _amount);\r\n\r\n    function CVTTokenSaleMSG(CVTToken _tokenContract, uint256 _tokenPrice) public {\r\n        admin = msg.sender;\r\n        tokenContract = _tokenContract;\r\n        tokenPrice = _tokenPrice;\r\n    }\r\n\r\n    function multiply(uint x, uint y) internal pure returns (uint z) {\r\n        require(y == 0 || (z = x * y) / y == x);\r\n    }\r\n\r\n    function buyTokens(uint256 _numberOfTokens) public payable {\r\n        require(msg.value == multiply(_numberOfTokens, tokenPrice));\r\n        require(tokenContract.balanceOf(address(this)) >= _numberOfTokens);\r\n        require(tokenContract.transfer(msg.sender, _numberOfTokens));\r\n\r\n        tokensSold += _numberOfTokens;\r\n\r\n        emit Sell(msg.sender, _numberOfTokens);\r\n    }\r\n            //Fix endSale to complete transaction\r\n            \r\n        // function endSale() public {\r\n        // require(msg.sender == admin);\r\n        // require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));\r\n        // admin.transfer(address payable(this).balance);\r\n        // }\r\n}",
   "sourcePath": "C:/Users/tim/Documents/Git Projects/Test-Token/contracts/CVTTokenSale.sol",
   "ast": {
     "absolutePath": "/C/Users/tim/Documents/Git Projects/Test-Token/contracts/CVTTokenSale.sol",
@@ -367,7 +367,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 348,
+                        "referencedDeclaration": 372,
                         "src": "363:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -817,10 +817,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        351,
-                        352
+                        375,
+                        376
                       ],
-                      "referencedDeclaration": 351,
+                      "referencedDeclaration": 375,
                       "src": "541:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -981,7 +981,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 348,
+                            "referencedDeclaration": 372,
                             "src": "674:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1088,10 +1088,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        351,
-                        352
+                        375,
+                        376
                       ],
-                      "referencedDeclaration": 351,
+                      "referencedDeclaration": 375,
                       "src": "666:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1143,7 +1143,7 @@
                                   "name": "this",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 364,
+                                  "referencedDeclaration": 388,
                                   "src": "776:4:1",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_contract$_CVTTokenSale_$300",
@@ -1267,10 +1267,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        351,
-                        352
+                        375,
+                        376
                       ],
-                      "referencedDeclaration": 351,
+                      "referencedDeclaration": 375,
                       "src": "736:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1310,7 +1310,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 348,
+                              "referencedDeclaration": 372,
                               "src": "844:3:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1409,10 +1409,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        351,
-                        352
+                        375,
+                        376
                       ],
-                      "referencedDeclaration": 351,
+                      "referencedDeclaration": 375,
                       "src": "813:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1495,7 +1495,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 348,
+                          "referencedDeclaration": 372,
                           "src": "938:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1626,10 +1626,10 @@
           }
         ],
         "scope": 301,
-        "src": "55:1162:1"
+        "src": "55:1234:1"
       }
     ],
-    "src": "0:1217:1"
+    "src": "0:1289:1"
   },
   "legacyAST": {
     "attributes": {
@@ -2003,7 +2003,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 348,
+                                  "referencedDeclaration": 372,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -2274,10 +2274,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                351,
-                                352
+                                375,
+                                376
                               ],
-                              "referencedDeclaration": 351,
+                              "referencedDeclaration": 375,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -2626,10 +2626,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                351,
-                                352
+                                375,
+                                376
                               ],
-                              "referencedDeclaration": 351,
+                              "referencedDeclaration": 375,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -2670,7 +2670,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 348,
+                                      "referencedDeclaration": 372,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -2795,10 +2795,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                351,
-                                352
+                                375,
+                                376
                               ],
-                              "referencedDeclaration": 351,
+                              "referencedDeclaration": 375,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -2912,7 +2912,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 364,
+                                          "referencedDeclaration": 388,
                                           "type": "contract CVTTokenSale",
                                           "value": "this"
                                         },
@@ -2985,10 +2985,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                351,
-                                352
+                                375,
+                                376
                               ],
-                              "referencedDeclaration": 351,
+                              "referencedDeclaration": 375,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -3069,7 +3069,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 348,
+                                      "referencedDeclaration": 372,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -3220,7 +3220,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 348,
+                                  "referencedDeclaration": 372,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -3270,12 +3270,12 @@
         ],
         "id": 300,
         "name": "ContractDefinition",
-        "src": "55:1162:1"
+        "src": "55:1234:1"
       }
     ],
     "id": 301,
     "name": "SourceUnit",
-    "src": "0:1217:1"
+    "src": "0:1289:1"
   },
   "compiler": {
     "name": "solc",
@@ -3285,12 +3285,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x58436028F891922Ea2148a6eF9c9d37549f15F78",
-      "transactionHash": "0xdbe1148f4e9200dc8ce8ce597cae81846387634cfa3aeb6210996e4d11aa3122"
+      "address": "0xAAC972943E2A415842F7F1f5acdB05c5d223018D",
+      "transactionHash": "0x14b5d6a0051615de415b1245760b4edd219b8fc99454e0fd52b11ba69cd8ed77"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-06-06T00:10:18.361Z",
+  "updatedAt": "2021-06-06T15:12:50.364Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

@@ -22,7 +22,7 @@ contract('CVTToken', function(accounts) {
 			tokenInstance = instance;
 			return tokenInstance.totalSupply();
 		}).then(function(totalSupply) {
-			assert.equal(totalSupply.tonumber(), 50000, 'sets the total supply to 50,000');
+			assert.equal(totalSupply.toNumber(), 50000, 'sets the total supply to 50,000');
 			return tokenInstance.balanceOf(accounts[0]);
 		}).then(function(adminBalance) {
 			assert.equal(adminBalance.toNumber(), 50000, 'it allocatesthe initial supply to the admin account');
@@ -39,7 +39,7 @@ contract('CVTToken', function(accounts) {
 			assert.equal(success, true, 'it returns true');
 		    return tokenInstance.transfer(accounts[1], 2500, { from: accounts[0] });
 		}).then(function(receipt) {
-			assert.equal(receipt.logs.length, 1 'triggers one event');
+			assert.equal(receipt.logs.length, 1, 'triggers one event');
 			assert.equal(receipt.logs[0].event, 'Transfer', 'should be the "Transfer" event');
 			assert.equal(receipt.logs[0].args._from, accounts[0], 'logs the account the tokens are transferred from');
 			assert.equal(receipt.logs[0].args._to, accounts[1], 'logs the account the tokens are transfered to');
@@ -50,7 +50,7 @@ contract('CVTToken', function(accounts) {
 			return tokenInstance.balanceOf(accounts[0]);
 		}).then(function(balance) {
 			assert.equal(balance.toNumber(), 47500, 'deducts the ammount from the sending account');
-		})
+		});
 	  });
   it('approves tokens for delegated transfer', function() {
     return CVTToken.deployed().then(function(instance) {
