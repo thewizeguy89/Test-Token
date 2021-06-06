@@ -3,7 +3,7 @@ pragma solidity ^0.5.0;
 import "./CVTToken.sol";
 
 contract CVTTokenSale {
-    address admin;
+    address payable admin;
     CVTToken public tokenContract;
     uint256 public tokenPrice;
     uint256 public tokensSold;
@@ -22,7 +22,7 @@ contract CVTTokenSale {
 
     function buyTokens(uint256 _numberOfTokens) public payable {
         require(msg.value == multiply(_numberOfTokens, tokenPrice));
-        require(tokenContract.balanceOf(this) >= _numberOfTokens);
+        require(tokenContract.balanceOf(address(this)) >= _numberOfTokens);
         require(tokenContract.transfer(msg.sender, _numberOfTokens));
 
         tokensSold += _numberOfTokens;
@@ -30,9 +30,9 @@ contract CVTTokenSale {
         emit Sell(msg.sender, _numberOfTokens);
     }
 
-    function endSale() public {
-        require(msg.sender == admin);
-        require(tokenContract.transfer(admin, tokenContract.balanceOf(this)));
-        admin.transfer(address, payable(this).balance);
-    }
+    // function endSale() public {
+       // require(msg.sender == admin);
+        // require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));
+        // admin.transfer(address payable(this).balance);
+    // }
 }
