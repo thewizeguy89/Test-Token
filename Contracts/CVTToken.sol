@@ -4,7 +4,6 @@ contract CVTToken{
 	string public name = "CVTToken";
 	string public symbol = "CVTT";
 	string public standard = "CVTToken v1.0";
-	uint8 public decimals = 18; // same value as wei
 	uint256 public totalSupply;
 
 	mapping(address => uint256) public balanceOf;
@@ -22,7 +21,7 @@ contract CVTToken{
 	uint256 _value
 	);
 
-	function CVTTokenSupply( uint256 _initialSupply) public {
+	constructor ( uint256 _initialSupply) public {
 		balanceOf[msg.sender] = _initialSupply;
 		totalSupply = _initialSupply;
     }

@@ -31,9 +31,9 @@ contract CVTTokenSale {
     }
             //Fix endSale to complete transaction
 
-    function endSale() public {
+   function endSale() public {
         require(msg.sender == admin);
         require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));
-        admin.transfer(address payable(this).balance);
+        admin.transfer(address(this).balance);
     }
 }
