@@ -1,0 +1,17 @@
+{
+  "name": "CVT-Token-sale",
+  "version": "1.0.0",
+  "description": "CVT Token Sale ICO",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "author": "Timothy",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
