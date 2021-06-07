@@ -15,10 +15,11 @@ contract('CVTTokenSale', function(accounts) {
       tokenSaleInstance = instance;
       return tokenSaleInstance.address
     }).then(function(address) {
-      assert.notEqual(address, 0x0, 'has contract address');
+      assert.notEqual(address,0x0, 'has contract address');
+      debugger
       return tokenSaleInstance.tokenContract();
     }).then(function(address) {
-      assert.notEqual(address, 0x0, 'has token contract address');
+      assert.notEqual(address,0x0, 'has token contract address');
       return tokenSaleInstance.tokenPrice();
     }).then(function(price) {
       assert.equal(price, tokenPrice, 'token price is correct');

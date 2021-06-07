@@ -6,6 +6,7 @@ contract CVTToken{
 	string public standard = "CVTToken v1.0";
 	uint256 public totalSupply;
 
+
 	event Transfer(
 	address indexed _from,
 	address indexed _to,

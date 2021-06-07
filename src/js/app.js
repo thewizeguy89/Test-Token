@@ -1,7 +1,7 @@
 App = {
   web3Provider: null,
   contracts: {},
-  account: '0x0',
+  account: '0x1fb3913D3bE5D44e8d818D08aE7c2D86b8bCD909',
   loading: false,
   tokenPrice: 1000000000000000,
   tokensSold: 0,
@@ -17,6 +17,7 @@ App = {
       // If a web3 instance is already provided by Meta Mask.
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(web3.currentProvider);
+      window.ethereum.enable();
     } else {
       // Specify default instance if no web3 instance provided
       App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
