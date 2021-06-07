@@ -12,35 +12,23 @@ App = {
     return App.initWeb3();
   },
 
-initWeb3: function( ) {
-// Wait for loading completion to avoid race conditions with web3 injection timing.
+    initWeb3: function() {
+        // if (typeof web3 !== 'undefined') {
         if (window.ethereum) {
-          const web3 = new Web3(window.ethereum);
-          try {
-            // Request account access if needed
-            window.ethereum.enable()
-                .then(web3 => {
-                    console.log(web3)
-                    App.web3Provider = web3;
-                });
-          } catch (error) {
-            console.error(error);
-          }
+            // If a web3instance is already is already provided by Meta Mask
+            // App.web3Provider = web3.currentProvider;
+            // web3 = new Web3(web3.currentProvider);
+            console.log("MetaMask Installed.");
+            App.web3Provider = window.ethereum;
+            window.web3 = new Web3(window.ethereum);
+            window.ethereum.enable();
+        } else {
+            // Specify default instance if no web3 instance provided
+            // App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+            App.web3Provider = new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/482690ddac7b4c9fabae7cb9c3f75dc1');
+            window.web3 = new Web3(window.ethereum);
         }
-        // Legacy dapp browsers...
-        else if (window.web3) {
-          // Use Mist/MetaMask's provider.
-          const web3 = window.web3;
-          console.log('Injected web3 detected.');
-          App.web3Provider = web3;
-        }
-        // Fallback to localhost; use dev console port by default...
-        else {
-          const provider = new Web3.providers.HttpProvider('http://127.0.0.1:7545');
-          const web3 = new Web3(provider);
-          console.log('No web3 instance injected, using Local web3.');
-          App.web3Provider = web3;
-        }
+
         return App.initContracts();
     },
 

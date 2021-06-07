@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity >=0.4.22 <0.9.0;
 
 import "./CVTToken.sol";
 
@@ -10,7 +10,7 @@ contract CVTTokenSale {
 
     event Sell(address _buyer, uint256 _amount);
 
-    function CVTTokenSaleMSG(CVTToken _tokenContract, uint256 _tokenPrice) public {
+       constructor(CVTToken _tokenContract, uint256 _tokenPrice) public {
         admin = msg.sender;
         tokenContract = _tokenContract;
         tokenPrice = _tokenPrice;
@@ -21,6 +21,7 @@ contract CVTTokenSale {
     }
 
     function buyTokens(uint256 _numberOfTokens) public payable {
+
         require(msg.value == multiply(_numberOfTokens, tokenPrice));
         require(tokenContract.balanceOf(address(this)) >= _numberOfTokens);
         require(tokenContract.transfer(msg.sender, _numberOfTokens));
@@ -29,11 +30,11 @@ contract CVTTokenSale {
 
         emit Sell(msg.sender, _numberOfTokens);
     }
-            //Fix endSale to complete transaction
 
-   function endSale() public {
+    function endSale() public {
         require(msg.sender == admin);
         require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));
         admin.transfer(address(this).balance);
     }
+    
 }
