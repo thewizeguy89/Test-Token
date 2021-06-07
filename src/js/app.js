@@ -1,7 +1,7 @@
 App = {
   web3Provider: null,
   contracts: {},
-  account: '0x1fb3913D3bE5D44e8d818D08aE7c2D86b8bCD909',
+  account: '0x0',
   loading: false,
   tokenPrice: 1000000000000000,
   tokensSold: 0,
@@ -12,19 +12,37 @@ App = {
     return App.initWeb3();
   },
 
-  initWeb3: function() {
-    if (typeof web3 !== 'undefined') {
-      // If a web3 instance is already provided by Meta Mask.
-      App.web3Provider = web3.currentProvider;
-      web3 = new Web3(web3.currentProvider);
-      window.ethereum.enable();
-    } else {
-      // Specify default instance if no web3 instance provided
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
-      web3 = new Web3(App.web3Provider);
-    }
-    return App.initContracts();
-  },
+initWeb3: function( ) {
+// Wait for loading completion to avoid race conditions with web3 injection timing.
+        if (window.ethereum) {
+          const web3 = new Web3(window.ethereum);
+          try {
+            // Request account access if needed
+            window.ethereum.enable()
+                .then(web3 => {
+                    console.log(web3)
+                    App.web3Provider = web3;
+                });
+          } catch (error) {
+            console.error(error);
+          }
+        }
+        // Legacy dapp browsers...
+        else if (window.web3) {
+          // Use Mist/MetaMask's provider.
+          const web3 = window.web3;
+          console.log('Injected web3 detected.');
+          App.web3Provider = web3;
+        }
+        // Fallback to localhost; use dev console port by default...
+        else {
+          const provider = new Web3.providers.HttpProvider('http://127.0.0.1:7545');
+          const web3 = new Web3(provider);
+          console.log('No web3 instance injected, using Local web3.');
+          App.web3Provider = web3;
+        }
+        return App.initContracts();
+    },
 
   initContracts: function() {
     $.getJSON("CVTTokenSale.json", function(CVTTokenSale) {
